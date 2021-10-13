@@ -7,7 +7,7 @@
   </head>
 
   <body>
-    <header class="page-header">
+    <header class="page-header container">
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -20,7 +20,7 @@
             <a class="navigation-link navigation-link-current">Гостиницы</a>
           </li>
         </ul>
-          <a class="navigation-link-logo" href="index.html">
+          <a class="navigation-link-logo">
             <img class="navigation-logo" src="img/header-nav/sedona.svg" width="138" height="70" alt="Логотип Седоны">
           </a>
         <ul class="navigation-user">
@@ -67,7 +67,7 @@
         <section class="catalog-filter">
           <h2 class="visually-hidden">Список товаров с фильтрами</h2>
           <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="catalog-filter-group">
+            <fieldset class="catalog-filter-group catalog-filter-infrastructure">
               <legend class="catalog-filter-title">Инфраструктура:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
@@ -94,7 +94,7 @@
               </ul>
             </fieldset>
 
-            <fieldset class="catalog-filter-group">
+            <fieldset class="catalog-filter-group catalog-filter-type">
               <legend class="catalog-filter-title">Тип жилья:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
@@ -121,7 +121,7 @@
               </ul>
             </fieldset>
 
-            <fieldset class="catalog-filter-group">
+            <fieldset class="catalog-filter-group catalog-filter-price">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <label class="catalog-filter-label">
                 <input class="catalog-filter-input" type="number" name="min-price" value="0" min="0">от
@@ -139,7 +139,7 @@
               </button>
             </fieldset>
 
-            <div>
+            <div class="catalog-button">
               <button class="button button-apply button-blue" type="submit">Применить</button>
               <button class="button button-reset button-transparent" type="reset">Сбросить</button>
             </div>
@@ -314,38 +314,40 @@
       </section>
     </main>
 
-    <footer class="page-footer">
-      <div class="footer-social">
-        <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a class="footer-social-link" href="https://twitter.com/htmlacademy_ru">
-              <span class="visually-hidden">Твиттер</span>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a class="footer-social-link" href="https://www.facebook.com/htmlacademy">
-              <span class="visually-hidden">Фейсбук</span>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a class="footer-social-link" href="https://www.youtube.com/c/HTMLAcademyRUS">
-              <span class="visually-hidden">Ютуб</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+    <footer class="page-footer container">
+      <div class="footer-container">
+        <div class="footer-social">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="https://twitter.com/htmlacademy_ru">
+                <span class="visually-hidden">Твиттер</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="https://www.facebook.com/htmlacademy">
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="https://www.youtube.com/c/HTMLAcademyRUS">
+                <span class="visually-hidden">Ютуб</span>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-      <div class="footer-contacts">
-        <h2 class="visually-hidden">Номер телефона</h2>
-          <a class="footer-contacts-phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      </div>
+        <div class="footer-contacts">
+          <h2 class="visually-hidden">Номер телефона</h2>
+            <a class="footer-contacts-phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        </div>
 
-      <div class="footer-creators">
-        <h2 class="visually-hidden">Разработчик</h2>
-        <a class="footer-creators-link" href="https://htmlacademy.ru/">
-          <span class="visually-hidden">Сайт разработчика</span>
-        </a>
+        <div class="footer-creators">
+          <h2 class="visually-hidden">Разработчик</h2>
+          <a class="footer-creators-link" href="https://htmlacademy.ru/">
+            <span class="visually-hidden">Сайт разработчика</span>
+          </a>
+        </div>
       </div>
     </footer>
   </body>
