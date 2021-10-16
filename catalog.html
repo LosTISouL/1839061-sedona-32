@@ -20,7 +20,7 @@
             <a class="navigation-link navigation-link-current">Гостиницы</a>
           </li>
         </ul>
-          <a class="navigation-link-logo">
+          <a class="navigation-link-logo" href="index.html">
             <img class="navigation-logo" src="img/header-nav/sedona.svg" width="138" height="70" alt="Логотип Седоны">
           </a>
         <ul class="navigation-user">
@@ -48,7 +48,7 @@
       </nav>
     </header>
 
-    <main class="page-main">
+    <main class="page-main container">
       <div class="background-inner-img">
         <header class="inner-header">
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -148,26 +148,28 @@
       </div>
 
       <section class="catalog-products">
-        <p class="hotels-found">Найдено Гостиниц: <span class="hotels-found-number">38</span></p>
+        <div class="sorting-container">
+          <p class="hotels-found">Найдено Гостиниц: <span class="hotels-found-number">38</span></p>
 
-        <form class="sorting-type" action="https://echo.htmlacademy.ru/" method="get">
-          <label class="visually-hidden" for="sorting">Сортировка</label>
-          <select class="select-filter-control" id="sorting" name="sorting">
-            <option value="cheap">Сначала дешевые</option>
-          </select>
-          <button class="visually-hidden" type="submit">Отсортировать продукты</button>
-        </form>
+          <form class="sorting-type" action="https://echo.htmlacademy.ru/" method="get">
+            <label class="visually-hidden" for="sorting">Сортировка</label>
+            <select class="select-filter-control" id="sorting" name="sorting">
+              <option value="cheap">Сначала дешевые</option>
+            </select>
+            <button class="visually-hidden" type="submit">Отсортировать продукты</button>
+          </form>
 
-        <div class="change-view">
-          <a class="change-view-link change-view-link-cards" href="#">
-            <span class="visually-hidden">Показать карточки</span>
-          </a>
-          <a class="change-view-link change-view-link-photo" href="#">
-            <span class="visually-hidden">Показать фото карточки</span>
-          </a>
-          <a class="change-view-link change-view-link-list" href="#">
-            <span class="visually-hidden">Показать список</span>
-          </a>
+          <div class="change-view">
+            <a class="change-view-link change-view-link-cards" href="#">
+              <span class="visually-hidden">Показать карточки</span>
+            </a>
+            <a class="change-view-link change-view-link-photo" href="#">
+              <span class="visually-hidden">Показать фото карточки</span>
+            </a>
+            <a class="change-view-link change-view-link-list" href="#">
+              <span class="visually-hidden">Показать список</span>
+            </a>
+          </div>
         </div>
 
         <div class="product-card">
@@ -294,8 +296,8 @@
         </ul>
 
         <div class="number-hotels">
-          <p class="number-hotels-text">Гостиниц на странице:</p>
-          <select class="number-hotels-select" name="number-hotels">
+          <label class="number-hotels-text" for="number-hotels">Гостиниц на странице:</label>
+          <select class="number-hotels-select" name="number-hotels" id="number-hotels">
             <option value="4">4</option>
           </select>
         </div>
@@ -305,9 +307,9 @@
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p>
+            <p class="email-form">
               <label class="visually-hidden" for="subscribe-email">Ваш e-mail</label>
-              <input type="email" name="email" placeholder="Ваш e-mail" id="subscribe-email">
+              <input class="subscribe-email-form" type="email" name="email" placeholder="Ваш e-mail" id="subscribe-email">
               <button type="submit" class="button button-blue subscribe-button">Подписаться</button>
             </p>
         </form>
