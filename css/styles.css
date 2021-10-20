@@ -54,6 +54,10 @@ body {
 }
 
 .button {
+  font-family: inherit;
+  vertical-align: middle;
+  display: inline-block;
+  text-align: center;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
@@ -89,6 +93,7 @@ body {
 
 .navigation-list {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   width: 531px;
   margin: 0;
@@ -102,6 +107,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: center;
   width: 531px;
   margin: 0;
   margin-left: auto;
@@ -110,25 +116,37 @@ body {
   list-style: none;
 }
 
+.navigation-item:not(:last-child) {
+  margin-right: 33px;
+}
+
+.navigation-user-item:not(:last-child) {
+  margin-right: 21px;
+}
+
 .navigation-link {
   display: block;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   text-align: center;
-  min-width: 18px;
-  min-height: 18px;
   padding-top: 19px;
-  padding-right: 33px;
+  padding-bottom: 20px;
   color: #000000;
   text-decoration: none;
+}
+
+.navigation-user-link {
+  min-width: 18px;
+  min-height: 18px;
 }
 
 .navigation-button {
   font-size: 16px;
   line-height: 21px;
-  width: 160px;
-  height: 37px;
+  min-width: 160px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .favorites-number {
@@ -181,9 +199,10 @@ body {
   text-align: center;
 }
 
+
 .advantages-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -205,7 +224,12 @@ body {
   width: 400px;
 }
 
+.advantages-item-small {
+  display: block;
+}
+
 .advantages-item-blue {
+  grid-column: 1 / -1;
   color: #FFFFFF;
   background-color: #83B3D3;
 }
@@ -222,7 +246,8 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-item-title {
+.advantages-item-title,
+.advantages-item-title-icon {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -233,12 +258,21 @@ body {
   text-transform: uppercase;
 }
 
-.advantages-item-description {
+.advantages-item-title-icon {
+  padding-bottom: 0;
+}
+
+.advantages-item-description,
+.advantages-item-description-icon {
   margin: 0;
   padding-top: 26px;
   padding-right: 90px;
   padding-bottom: 77px;
   padding-left: 90px;
+}
+
+.advantages-item-description-icon {
+  padding-top: 20px;
 }
 
 /* search */
@@ -255,8 +289,9 @@ body {
 .search-button {
   font-size: 20px;
   line-height: 36px;
-  width: 575px;
-  height: 60px;
+  min-width: 575px;
+  padding-top: 11px;
+  padding-bottom: 13px;
 }
 
 /* subscribe */
@@ -289,15 +324,23 @@ body {
   color: #FFFFFF;
 }
 
+.email-form {
+  display: flex;
+  width: 800px;
+}
+
 .subscribe-email-form {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
   width: 600px;
   height: 60px;
   background-color: #F2F2F2;
 }
 
 .subscribe-button {
-  width: 200px;
-  height: 60px;
+  font-size: 20px;
+  min-width: 200px;
 }
 
 /* catalog */
@@ -305,6 +348,7 @@ body {
   background-image: url("../img/catalog/background/catalog-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  padding-bottom: 86px;
   color: #FFFFFF;
   background-color: #83B3D3;
 }
@@ -332,6 +376,7 @@ body {
   width: 111px;
   margin: 0;
   margin-left: 73px;
+  margin-bottom: 45px;
   padding: 0;
   list-style: none;
 }
@@ -391,10 +436,27 @@ body {
   line-height: 23px;
 }
 
+.catalog-button {
+  display: flex;
+  flex-direction: column;
+}
+
 .button-apply,
 .button-reset {
-  width: 160px;
-  height: 48px;
+  min-width: 160px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.button-apply {
+  font-size: 16px;
+}
+
+.button-reset {
+  text-transform: none;
+  font-weight: 400;
+  font-size: 18px;
+
 }
 
 /* catalog-products */
@@ -411,7 +473,7 @@ body {
 
 .sorting-container {
   display: flex;
-  margin-bottom: 42px;
+  margin-bottom: 73px;
   padding-top: 44px;
 }
 
@@ -454,19 +516,28 @@ body {
   color: #333333;
 }
 
-.product-card {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .product-card-list {
+  display: grid;
+  grid-template-columns: 1056px;
+  gap: 58px;
   margin: 0;
+  margin-bottom: 61px;
   padding: 0;
   list-style: none;
 }
 
 .product-card-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 180px 36px 318px 361px 160px;
+  grid-column: 1 / -1;
+}
+
+.product-card-image {
+  grid-column: 1 / 1;
+}
+
+.product-card-container {
+  grid-column: 3 / 5;
 }
 
 .product-card-link {
@@ -477,25 +548,58 @@ body {
   color: #000000;
 }
 
-.product-card-image {
-  margin-right: 37px;
+.product-card-title {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.product-card-text {
+  margin-top: 0;
+  margin-bottom: 31px;
+}
+
+.product-card-type {
+  margin-right: 78px;
 }
 
 .product-card-button {
-  width: 151px;
-  height: 37px;
+  min-width: 151px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.product-card-button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.product-card-rating-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: auto;
 }
 
 .product-card-rating {
+  text-transform: uppercase;
+  min-width: 160px;
+  margin-top: auto;
+  padding-top: 7px;
+  padding-bottom: 7px;
   background-color: #F2F2F2;
 }
 
 .pagination-show-more {
-  width: 625px;
-  height: 55px;
+  font-size: 20px;
   align-self: center;
-  margin-top: 31px;
-  margin-bottom: 30px;
+  min-width: 625px;
+  margin-bottom: 61px;
+  padding-top: 15px;
+  padding-bottom: 14px;
+}
+
+.pagination-container {
+  display: flex;
 }
 
 .pagination-list {
@@ -506,7 +610,7 @@ body {
 }
 
 .pagination-item:not(:last-child) {
-  margin-left: 7px;
+  margin-right: 7px;
 }
 
 .pagination-link {
@@ -516,8 +620,7 @@ body {
   font-size: 20px;
   line-height: 26px;
   text-decoration: none;
-  width: 55px;
-  height: 55px;
+  min-width: 55px;
   padding: 14px 0;
   color: #FFFFFF;
   background-color: #83B3D3;
@@ -530,6 +633,8 @@ body {
 
 .number-hotels {
   display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .number-hotels-text {
@@ -566,8 +671,14 @@ body {
   list-style: none;
 }
 
+.footer-social-item:not(:last-child) {
+  margin-right: 20px;
+}
+
 .footer-social-link {
   text-decoration: none;
+  min-width: 20px;
+  min-height: 18px;
   color: #83B3D3;
 }
 
