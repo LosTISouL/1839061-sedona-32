@@ -59,7 +59,7 @@ body {
 }
 
 .button {
-  font-family: inherit;
+  font-family: "PT Sans", sans-serif;
   vertical-align: middle;
   display: inline-block;
   text-align: center;
@@ -542,7 +542,7 @@ body {
   background-color: #83B3D3;
 }
 
-.advantages-item-blue .advantages-item-container > .advantages-item-title {
+.advantages-item-blue .advantages-item-title {
   color: #FFFFFF;
 }
 
@@ -679,7 +679,7 @@ body {
 }
 
 .subscribe-email-form {
-  font-family: inherit;
+  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 18px;
   width: 600px;
