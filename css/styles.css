@@ -874,6 +874,7 @@ body {
 .filter-control {
   position: relative;
   display: block;
+  word-break: break-word;
   padding-left: 39px;
 }
 
@@ -1066,7 +1067,7 @@ body {
 .catalog-button {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: start;
   margin-top: 62px;
 }
 
